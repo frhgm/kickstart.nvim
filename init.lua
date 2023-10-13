@@ -304,7 +304,7 @@ vim.keymap.set('n', '<leader>/', function()
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 local find = function()
-  return telescope_builtin.find_files({ cwd = vim.fn.expand('%:p:h') })
+  return telescope_builtin.find_files({ cwd = vim.fn.getcwd() })
 end
 
 vim.keymap.set('n', '<leader>gf', telescope_builtin.git_files, { desc = 'Search [G]it [F]iles' })
