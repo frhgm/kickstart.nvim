@@ -225,6 +225,13 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Atajo para deshabilitar TERM mode
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 
+-- Harpoon Mark
+vim.keymap.set('n', 'hx', require("harpoon.mark").add_file, { desc = '[H]arpoon [M]ark' })
+vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
+
+-- Si lo quiero con Telescope
+-- vim.keymap.set('n', 'ht', ':Telescope harpoon marks<CR>', { desc = '[H]arpoon [T]oggle' })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
