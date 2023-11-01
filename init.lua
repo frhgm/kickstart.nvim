@@ -225,7 +225,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 
 -- Harpoon Mark
-vim.keymap.set('n', 'hx', require("harpoon.mark").add_file, { desc = '[H]arpoon [M]ark' })
+vim.keymap.set('n', 'ha', require("harpoon.mark").add_file, { desc = '[H]arpoon [A]dd' })
+vim.keymap.set('n', 'hr', require("harpoon.mark").rm_file, { desc = '[H]arpoon [R]emove' })
 vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
 
 -- Si lo quiero con Telescope
