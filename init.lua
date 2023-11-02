@@ -224,10 +224,22 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Atajo para deshabilitar TERM mode
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 
--- Harpoon Mark
+local harpoon_term = require('harpoon.term');
+
+local openHarpoonTerm = function()
+  return harpoon_term.gotoTerminal(1)
+end
+
+local closeHarpoonTerm = function()
+  return harpoon_term.clear_all()
+end
+
+-- Harpoon
 vim.keymap.set('n', 'ha', require("harpoon.mark").add_file, { desc = '[H]arpoon [A]dd' })
 vim.keymap.set('n', 'hr', require("harpoon.mark").rm_file, { desc = '[H]arpoon [R]emove' })
 vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
+vim.keymap.set('n', 'hto', openHarpoonTerm, { desc = '[H]arpoon [T]erminal [O]pen' })
+vim.keymap.set('n', 'htc', closeHarpoonTerm, { desc = '[H]arpoon [T]erminal [C]lose' })
 
 -- Si lo quiero con Telescope
 -- vim.keymap.set('n', 'ht', ':Telescope harpoon marks<CR>', { desc = '[H]arpoon [T]oggle' })
