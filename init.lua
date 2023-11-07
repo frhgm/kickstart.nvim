@@ -235,7 +235,7 @@ local closeHarpoonTerm = function()
 end
 
 -- Harpoon
-vim.keymap.set('n', 'ha', require("harpoon.mark").add_file, { desc = '[H]arpoon [A]dd' })
+vim.keymap.set('n', 'hx', require("harpoon.mark").add_file, { desc = '[H]arpoon [A]dd' })
 vim.keymap.set('n', 'hr', require("harpoon.mark").rm_file, { desc = '[H]arpoon [R]emove' })
 vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
 vim.keymap.set('n', 'hto', openHarpoonTerm, { desc = '[H]arpoon [T]erminal [O]pen' })
