@@ -2,6 +2,12 @@
 return
 {
 	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
 		"tanvirtin/monokai.nvim",
 		config = function()
 			vim.cmd.colorscheme 'monokai_pro'
@@ -13,5 +19,5 @@ return
 		config = function()
 			vim.cmd.colorscheme 'onedark'
 		end,
-	},
+	}
 };
