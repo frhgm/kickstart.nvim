@@ -1,6 +1,4 @@
-
 --[[
-
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
@@ -207,41 +205,16 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
-
--- [[ Basic Keymaps ]]
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.keymap.set('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Atajo para deshabilitar TERM mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
-
 local harpoon_term = require('harpoon.term');
 
-local openHarpoonTerm = function()
+OpenHarpoonTerm = function()
   return harpoon_term.gotoTerminal(1)
 end
 
-local closeHarpoonTerm = function()
+CloseHarpoonTerm = function()
   return harpoon_term.clear_all()
 end
 
--- Harpoon
-vim.keymap.set('n', 'hx', require("harpoon.mark").add_file, { desc = '[H]arpoon [A]dd' })
-vim.keymap.set('n', 'hr', require("harpoon.mark").rm_file, { desc = '[H]arpoon [R]emove' })
-vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
-vim.keymap.set('n', 'hto', openHarpoonTerm, { desc = '[H]arpoon [T]erminal [O]pen' })
-vim.keymap.set('n', 'htc', closeHarpoonTerm, { desc = '[H]arpoon [T]erminal [C]lose' })
-
--- Si lo quiero con Telescope
--- vim.keymap.set('n', 'ht', ':Telescope harpoon marks<CR>', { desc = '[H]arpoon [T]oggle' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -520,4 +493,5 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 --
 
+require 'custom.keymaps'
 require 'custom.options'
