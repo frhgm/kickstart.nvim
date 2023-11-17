@@ -40,4 +40,4 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 vim.o.guifont = "JetBrainsMono NF:h9"
 
-vim.cmd.colorscheme('solarized-osaka-moon')
+vim.cmd.colorscheme('monokai_ristretto')
