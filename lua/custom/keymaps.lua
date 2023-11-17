@@ -24,3 +24,6 @@ vim.keymap.set('n', 'htc', CloseHarpoonTerm, { desc = '[H]arpoon [T]erminal [C]l
 
 -- Si lo quiero con Telescope
 -- vim.keymap.set('n', 'ht', ':Telescope harpoon marks<CR>', { desc = '[H]arpoon [T]oggle' })
+
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[C]ode [R]ename' })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
