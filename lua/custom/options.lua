@@ -41,3 +41,5 @@ vim.o.termguicolors = true
 vim.o.guifont = "JetBrainsMono NF:h9"
 
 vim.cmd.colorscheme('monokai_ristretto')
+
+vim.opt.shell = 'pwsh'
