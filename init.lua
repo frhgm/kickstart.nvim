@@ -1,3 +1,4 @@
+--TODO: Crear script que detecte si estoy dentro de un buffer con un lenguaje sin un LSP instalado
 --[[
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
