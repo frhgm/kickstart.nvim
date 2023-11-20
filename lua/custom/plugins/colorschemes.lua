@@ -19,5 +19,6 @@ return
 		config = function()
 			vim.cmd.colorscheme 'onedark'
 		end,
-	}
+	},
+	{ "ellisonleao/gruvbox.nvim" }
 };

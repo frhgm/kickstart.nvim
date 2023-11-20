@@ -40,6 +40,6 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 vim.o.guifont = "JetBrainsMono NF:h9"
 
-vim.cmd.colorscheme('monokai_ristretto')
+vim.cmd.colorscheme('gruvbox')
 
 vim.opt.shell = 'pwsh'
