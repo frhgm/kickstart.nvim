@@ -270,6 +270,8 @@ vim.keymap.set('n', '<leader>sd', telescope_builtin.diagnostics, { desc = '[S]ea
 -- TODO: Poder ver commits de un archivo en especifico
 -- TODO: Ademas al seleccionar un commit permitir ver mas detalle, en vez de checkout
 vim.keymap.set('n', '<leader>sc', telescope_builtin.git_commits, { desc = '[S]earch Git [C]ommits' })
+vim.keymap.set('n', '<leader>sk', telescope_builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+vim.keymap.set('n', '<leader>ss', ':Telescope<CR>', { desc = '[S]earch Telescope' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
