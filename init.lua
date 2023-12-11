@@ -134,6 +134,7 @@ require('lazy').setup({
 
 
   {
+    -- TODO: Mostrar ruta de archivo
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
@@ -244,6 +245,7 @@ require('telescope').setup {
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+pcall(require("telescope").load_extension "file_browser")
 local telescope_builtin = require('telescope.builtin');
 
 -- See `:help telescope.builtin`
@@ -272,20 +274,22 @@ vim.keymap.set('n', '<leader>sd', telescope_builtin.diagnostics, { desc = '[S]ea
 vim.keymap.set('n', '<leader>sc', telescope_builtin.git_commits, { desc = '[S]earch Git [C]ommits' })
 vim.keymap.set('n', '<leader>sk', telescope_builtin.keymaps, { desc = '[S]earch [K]eymaps' })
 vim.keymap.set('n', '<leader>ss', ':Telescope<CR>', { desc = '[S]earch Telescope' })
+vim.keymap.set('n', '<leader>sft', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
+  { desc = '[S]earch [F]iles [T]ree', noremap = true })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim', 'php' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
 
-  highlight = {
-    enable                            = true,
-    additional_vim_regex_highlighting = { 'org' },
-  },
+  -- highlight = {
+  --   enable                            = true,
+  --   additional_vim_regex_highlighting = { 'org' },
+  -- },
   indent = { enable = true },
   incremental_selection = {
     enable = true,
