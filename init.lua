@@ -27,7 +27,7 @@ Kickstart Guide:
 I have left several `:help X` comments throughout the init.lua
 You should run that command and read that help section for more information.
 
-In addition, I have some `NOTE:` items throughout the file.
+`NOTE:` In addition, I have some note items throughout the file.
 These are for you, the reader to help understand what is happening. Feel free to delete
 them once you know what you're doing, but they should serve as a guide for when you
 are first encountering a few different constructs in your nvim config.
@@ -286,10 +286,10 @@ require('nvim-treesitter.configs').setup {
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
 
-  -- highlight = {
-  --   enable                            = true,
-  --   additional_vim_regex_highlighting = { 'org' },
-  -- },
+  highlight = {
+    enable = true,
+    --   additional_vim_regex_highlighting = { 'org' },
+  },
   indent = { enable = true },
   incremental_selection = {
     enable = true,
