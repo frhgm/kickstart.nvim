@@ -413,7 +413,8 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  intelephense = {},
+  phpactor = {},
+  -- intelephense = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
@@ -448,6 +449,25 @@ mason_lspconfig.setup_handlers {
     }
   end
 }
+
+local function find_root_dir(pattern)
+  return vim.fn.finddir(pattern, ".;") or vim.fn.getcwd()
+end
+
+require('lspconfig.configs').phpls = {
+  default_config = {
+    cmd = { 'phpls' },
+    filetypes = { 'php' },
+    root_dir = function(pattern)
+      local cwd = vim.loop.cwd()
+      local root = require('lspconfig.util').root_pattern('.git')(pattern)
+
+      return require('lspconfig.util').path.is_descendant(cwd, root) and cwd or root
+    end,
+  },
+}
+
+require('lspconfig').phpls.setup({});
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
