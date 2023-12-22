@@ -281,7 +281,7 @@ vim.keymap.set('n', '<leader>sft', ':Telescope file_browser path=%:p:h select_bu
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim', 'php' },
+  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim', 'php', 'sql' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
