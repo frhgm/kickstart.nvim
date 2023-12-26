@@ -3,5 +3,9 @@
 -- Language server for PHP. Still learning
 
 return {
-	'phpactor/phpactor'
+	'gbprod/phpactor.nvim',
+	dependencies = {
+		"nvim-lua/plenary.nvim", -- required to update phpactor
+		"neovim/nvim-lspconfig" -- required to automaticly register lsp serveur
+	}
 }
