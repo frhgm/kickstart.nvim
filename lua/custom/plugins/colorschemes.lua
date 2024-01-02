@@ -1,6 +1,4 @@
--- Para seleccionar el tema por defecto debo ordenarlo como el primero en la tabla
-return
-{
+return {
 	{
 		"craftzdog/solarized-osaka.nvim",
 		lazy = false,
@@ -20,5 +18,15 @@ return
 			vim.cmd.colorscheme 'onedark'
 		end,
 	},
-	{ "ellisonleao/gruvbox.nvim" }
+	{ "ellisonleao/gruvbox.nvim" },
+	{
+		'jesseleite/nvim-noirbuddy',
+		dependencies = {
+			{ 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+		},
+		lazy = false,
+		priority = 1000,
+		opts = {
+		},
+	}
 };

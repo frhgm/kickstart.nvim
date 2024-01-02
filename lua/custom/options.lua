@@ -40,6 +40,10 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 vim.o.guifont = "JetBrainsMono NF:h9"
 
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.colorscheme('noirbuddy')
 
 vim.opt.shell = 'pwsh'
+
+require('noirbuddy').setup {
+	preset = 'miami-nights',
+}
