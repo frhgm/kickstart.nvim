@@ -45,5 +45,5 @@ vim.cmd.colorscheme('noirbuddy')
 vim.opt.shell = 'pwsh'
 
 require('noirbuddy').setup {
-	preset = 'miami-nights',
+	preset = 'slate',
 }
