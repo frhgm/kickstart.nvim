@@ -1,6 +1,7 @@
 --https://github.com/epwalsh/obsidian.nvim
 return {
 	"epwalsh/obsidian.nvim",
+	ft = "markdown",
 	lazy = true,
 	event = {
 		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.

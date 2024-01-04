@@ -4,6 +4,7 @@
 
 return {
 	'gbprod/phpactor.nvim',
+	ft = 'php',
 	dependencies = {
 		"nvim-lua/plenary.nvim", -- required to update phpactor
 		"neovim/nvim-lspconfig" -- required to automaticly register lsp serveur
