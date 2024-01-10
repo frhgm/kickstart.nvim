@@ -32,3 +32,4 @@ vim.keymap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]od
 
 --Si no funciona intentar con el comando :so
 vim.keymap.set('n', '<leader>rr', ':luafile ~/AppData/Local/nvim/init.lua <CR>', { desc = '[R]eload' })
+vim.keymap.set('v', '<leader>cr', ':lua vim.lsp.buf.code_action()<CR>', { desc = '[L]sp Action [R]ange' })
