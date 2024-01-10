@@ -65,6 +65,9 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
+  change_detection = {
+    notify = true,
+  },
   -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
@@ -405,7 +408,7 @@ local on_attach = function(_, bufnr)
   nmap('<leader>cc', 'execute :Format', '[C]ode [F]ormat')
 
   -- Map para iniciar LazyGit
-  nmap('<leader>gg', ':LazyGit<CR>');
+  nmap('<leader>gg', ':LazyGit<CR>') --TODO: No esta funcionando...
 end
 
 -- Enable the following language servers
