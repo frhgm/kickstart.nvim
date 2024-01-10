@@ -13,12 +13,11 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Atajo para deshabilitar TERM mode
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 
-
 -- [[ Harpoon ]]
 
 vim.keymap.set('n', 'hx', require('harpoon.mark').add_file, { desc = '[H]arpoon [A]dd' })
 vim.keymap.set('n', 'hr', require('harpoon.mark').rm_file, { desc = '[H]arpoon [R]emove' })
-vim.keymap.set('n', 'hu', require("harpoon.ui").toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
+vim.keymap.set('n', 'hu', require('harpoon.ui').toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
 vim.keymap.set('n', 'hto', OpenHarpoonTerm, { desc = '[H]arpoon [T]erminal [O]pen' })
 vim.keymap.set('n', 'htc', CloseHarpoonTerm, { desc = '[H]arpoon [T]erminal [C]lose' })
 
@@ -30,3 +29,6 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]c
 
 --Todo-Comments
 vim.keymap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
+
+--Si no funciona intentar con el comando :so
+vim.keymap.set('n', '<leader>rr', ':luafile ~/AppData/Local/nvim/init.lua <CR>', { desc = '[R]eload' })
