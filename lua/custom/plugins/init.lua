@@ -60,19 +60,7 @@ return
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 		}
-	},
-	{
-		'nvimtools/none-ls.nvim',
-		setup = function(null_ls)
-			require('none-ls').setup {
-				sources = {
-					null_ls.builtins.diagnostics.php
-				}
-			}
-		end
-	},
-
-	-- "gc" to comment visual regions/lines
+	}, -- "gc" to comment visual regions/lines
 	{ 'numToStr/Comment.nvim', opts = {} },
 	{
 		-- Add indentation guides even on blank lines
