@@ -138,6 +138,13 @@ local find = function()
   return telescope_builtin.find_files({ cwd = vim.fn.getcwd() })
 end
 
+local function telescope_live_grep_open_files()
+  require('telescope.builtin').live_grep {
+    grep_open_files = true,
+    prompt_title = 'Live Grep in Open Files',
+  }
+end
+
 vim.keymap.set('n', '<leader>gf', telescope_builtin.git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sf', find, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', telescope_builtin.help_tags, { desc = '[S]earch [H]elp' })
@@ -151,6 +158,8 @@ vim.keymap.set('n', '<leader>sk', telescope_builtin.keymaps, { desc = '[S]earch 
 vim.keymap.set('n', '<leader>ss', ':Telescope<CR>', { desc = '[S]earch Telescope' })
 vim.keymap.set('n', '<leader>sft', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
   { desc = '[S]earch [F]iles [T]ree', noremap = true })
+vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
+vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
