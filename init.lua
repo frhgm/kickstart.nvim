@@ -390,6 +390,7 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'tsnip' },
+    { name = 'path' },
   },
 }
 
