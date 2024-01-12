@@ -44,7 +44,7 @@ return
 	},
 	{
 		'rmagatti/goto-preview',
-		config = {
+		opts = {
 			default_mappings = true
 		}
 	},
