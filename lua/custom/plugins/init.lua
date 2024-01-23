@@ -162,5 +162,8 @@ return
 			'rafamadriz/friendly-snippets',
 		},
 	},
+	{
+		"onsails/lspkind-nvim"
+	},
 
 };

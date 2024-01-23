@@ -360,6 +360,8 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
+local lspkind = require('lspkind');
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -401,11 +403,20 @@ cmp.setup {
     { name = 'tsnip' },
     { name = 'path' },
   },
+  formatting = {
+    format = lspkind.cmp_format {
+      with_text = true,
+      menu = {
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        buffer = "[Buffer]"
+      }
+    }
+  }
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
---
 
 require 'custom.keymaps'
 require 'custom.options'
