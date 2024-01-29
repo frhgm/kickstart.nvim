@@ -41,3 +41,17 @@ vim.o.termguicolors = true
 vim.o.guifont = "JetBrainsMono NF:h9"
 
 vim.opt.shell = 'pwsh'
+
+--para marcar linea actual, y asi no perderme
+vim.opt.cursorline = true;
+
+--para darme una idea de donde esta el final de la linea
+vim.opt.colorcolumn = '90';
+
+--al fin deshabilito wrap!
+vim.opt.wrap = false;
+
+--configuraciones para que al llegar al borde de la pantalla pueda ver unas lineas o caracteres mas
+--demasiado util
+vim.opt.scrolloff = 8;
+vim.opt.sidescrolloff = 8;
