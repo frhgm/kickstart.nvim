@@ -277,7 +277,6 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
-  nmap('<leader>cc', 'execute :Format', '[C]ode [F]ormat')
 
   -- Map para iniciar LazyGit
   nmap('<leader>gg', ':LazyGit<CR>') --TODO: No esta funcionando...
