@@ -296,7 +296,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  phpactor = {},
+  -- phpactor = {},
   -- intelephense = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
