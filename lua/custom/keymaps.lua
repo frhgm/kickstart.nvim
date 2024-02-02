@@ -42,3 +42,9 @@ vim.keymap.set('n', '<leader>tt', ':TroubleToggle<CR>', { desc = '[T]rouble [T]o
 vim.keymap.set('n', '<leader>tw', ':TroubleToggle<CR>', { desc = '[T]rouble [W]orkspace' })
 vim.keymap.set('n', '<leader>td', ':TroubleToggle<CR>', { desc = '[T]rouble [D]ocument' })
 
+--Telescope
+vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, {
+	noremap = true,
+	silent = true,
+	desc = '[S]earch [R]esume',
+})
