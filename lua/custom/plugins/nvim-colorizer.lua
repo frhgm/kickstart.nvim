@@ -12,6 +12,7 @@ return {
 			css_fn = true,
 			-- Enable all CSS *functions*: rgb_fn, hsl_fn
 			tailwind = true,
+			names = true,
 		},
 	}
 }

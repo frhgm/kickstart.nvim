@@ -36,3 +36,9 @@ vim.keymap.set('v', '<leader>cr', ':lua vim.lsp.buf.code_action()<CR>', { desc =
 
 vim.keymap.set('n', '<leader>f', ':Format<CR>', { desc = '[F]ormat' })
 vim.keymap.set('n', '<leader>F', ':FormatWrite<CR>', { desc = '[F]ormat and write' })
+
+--Trouble
+vim.keymap.set('n', '<leader>tt', ':TroubleToggle<CR>', { desc = '[T]rouble [T]oggle' })
+vim.keymap.set('n', '<leader>tw', ':TroubleToggle<CR>', { desc = '[T]rouble [W]orkspace' })
+vim.keymap.set('n', '<leader>td', ':TroubleToggle<CR>', { desc = '[T]rouble [D]ocument' })
+
