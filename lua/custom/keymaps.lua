@@ -18,6 +18,8 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 vim.keymap.set('n', 'hx', require('harpoon.mark').add_file, { desc = '[H]arpoon [A]dd' })
 vim.keymap.set('n', 'hr', require('harpoon.mark').rm_file, { desc = '[H]arpoon [R]emove' })
 vim.keymap.set('n', 'hu', require('harpoon.ui').toggle_quick_menu, { desc = '[H]arpoon [T]oggle' })
+vim.keymap.set('n', 'hn', require('harpoon.ui').nav_next, { desc = '[H]arpoon [T]oggle' })
+vim.keymap.set('n', 'hp', require('harpoon.ui').nav_prev, { desc = '[H]arpoon [T]oggle' })
 vim.keymap.set('n', 'hto', OpenHarpoonTerm, { desc = '[H]arpoon [T]erminal [O]pen' })
 vim.keymap.set('n', 'htc', CloseHarpoonTerm, { desc = '[H]arpoon [T]erminal [C]lose' })
 
