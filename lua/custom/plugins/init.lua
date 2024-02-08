@@ -115,6 +115,9 @@ return
 					{ buffer = bufnr, desc = '[G]it [N]ext Hunk' })
 				vim.keymap.set('n', '<leader>gp', require('gitsigns').preview_hunk,
 					{ buffer = bufnr, desc = '[G]it [P]review [H]unk' })
+				vim.cmd('highlight GitSignsAdd guifg=LightGreen')
+				vim.cmd('highlight GitSignsChange guifg=Yellow')
+				vim.cmd('highlight GitSignsDelete guifg=Red')
 			end,
 		},
 	},
