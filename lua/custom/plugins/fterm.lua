@@ -1,7 +1,8 @@
 return {
 	"numToStr/FTerm.nvim",
 	opts = {
-		cmd = { os.getenv('SHELL') },
+		-- cmd = { os.getenv('SHELL') },
+		cmd = { "pwsh" },
 		dimensions = {
 			width = 0.9 -- 90% del total
 		},
