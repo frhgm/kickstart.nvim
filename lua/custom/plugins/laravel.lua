@@ -14,4 +14,5 @@ return {
 	},
 	event = { "VeryLazy" },
 	config = true,
+	ft = { "php", "blade" },
 }
