@@ -161,15 +161,6 @@ return
 	},
 	{
 		"onsails/lspkind-nvim"
-	},
-	{
-		"jiaoshijie/undotree",
-		dependencies = "nvim-lua/plenary.nvim",
-		config = true,
-		opts = function()
-			vim.keymap.set('n', '<leader>u', "<cmd>lua require('undotree').toggle()<cr>",
-				{ desc = '[U]ndoTree' })
-		end
 	}
 
 };
