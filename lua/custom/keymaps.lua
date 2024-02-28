@@ -50,3 +50,8 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, {
 	silent = true,
 	desc = '[S]earch [R]esume',
 })
+
+vim.keymap.set('n', '<leader>tm', function()
+	vim.cmd.split()
+	vim.cmd.term()
+end)
