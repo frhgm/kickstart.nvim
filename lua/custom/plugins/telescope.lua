@@ -31,8 +31,6 @@ vim.keymap.set('n', '<leader>sd', telescope_builtin.diagnostics, { desc = '[S]ea
 vim.keymap.set('n', '<leader>sc', telescope_builtin.git_commits, { desc = '[S]earch Git [C]ommits' })
 vim.keymap.set('n', '<leader>sk', telescope_builtin.keymaps, { desc = '[S]earch [K]eymaps' })
 vim.keymap.set('n', '<leader>ss', ':Telescope<CR>', { desc = '[S]earch Telescope' })
-vim.keymap.set('n', '<leader>sft', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
-	{ desc = '[S]earch [F]iles [T]ree', noremap = true })
 vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
 
