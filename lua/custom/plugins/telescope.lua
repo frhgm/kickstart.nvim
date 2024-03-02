@@ -1,5 +1,6 @@
 local telescope_builtin = require('telescope.builtin');
 
+
 local function telescope_live_grep_open_files()
 	require('telescope.builtin').live_grep {
 		grep_open_files = true,
@@ -10,7 +11,8 @@ end
 local find = function()
 	return telescope_builtin.find_files({ cwd = vim.fn.getcwd() })
 end
--- See `:help telescope.builtin`
+
+
 vim.keymap.set('n', '<leader>?', telescope_builtin.oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', telescope_builtin.buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
@@ -36,10 +38,34 @@ vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc =
 
 
 
+
+local options = {
+	defaults = {
+		layout_config = {
+			horizontal = {
+				width = 0.90
+			},
+			vertical = {
+				height = 0.99,
+				preview_cutoff = 40,
+				prompt_position = "bottom",
+				width = 0.99
+			},
+		}
+	},
+	pickers = {
+		find_files = {
+			-- theme = 'dropdown',
+		},
+	}
+}
+
 return {
 	'nvim-telescope/telescope.nvim',
 	name = 'telescope',
 	branch = '0.1.x',
+
+	opts = options,
 	dependencies = {
 		'nvim-lua/plenary.nvim',
 		-- Fuzzy Finder Algorithm which requires local dependencies to be built.
