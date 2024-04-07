@@ -3,8 +3,8 @@
 -- Cliente REST. Ojala pueda reemplazara a Insomnia!
 
 return {
-	'rest-nvim/rest.nvim',
-	config = function()
-		vim.keymap.set('n', "<leader>rc", "<Plug>RestNvim")
-	end,
+	-- 'rest-nvim/rest.nvim',
+	-- config = function()
+	-- 	vim.keymap.set('n', "<leader>rc", "<Plug>RestNvim")
+	-- end,
 };
