@@ -8,9 +8,5 @@ return {
 	requires = {
 		"kristijanhusak/vim-dadbod-ui",
 		"kristijanhusak/vim-dadbod-completion",
-	},
-	config = function()
-		--NOTE: Puedo ocupar esta tecnica para mantener estos archivos limpios
-		require("config.dadbod").setup()
-	end,
+	}
 }

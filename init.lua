@@ -42,7 +42,6 @@ P.S. You can delete this when you're done too. It's your config now :)
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -130,7 +129,7 @@ pcall(require('telescope').load_extension, 'fzf')
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim', 'php', 'sql' },
+  ensure_installed = { 'c', 'cpp', 'lua', 'tsx', 'typescript', 'vimdoc', 'vim', 'sql' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -305,7 +304,6 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  -- phpactor = {},
   -- intelephense = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
@@ -345,21 +343,6 @@ mason_lspconfig.setup_handlers {
 local function find_root_dir(pattern)
   return vim.fn.finddir(pattern, ".;") or vim.fn.getcwd()
 end
-
-require('lspconfig.configs').phpls = {
-  default_config = {
-    cmd = { 'phpls' },
-    filetypes = { 'php' },
-    root_dir = function(pattern)
-      local cwd = vim.loop.cwd()
-      local root = require('lspconfig.util').root_pattern('.git')(pattern)
-
-      return require('lspconfig.util').path.is_descendant(cwd, root) and cwd or root
-    end,
-  },
-}
-
-require('lspconfig').phpls.setup({});
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
@@ -422,6 +405,13 @@ cmp.setup {
     }
   }
 }
+
+cmp.setup.filetype({ 'sql' }, {
+  sources = {
+    { name = 'vim-dadbod-completion' },
+    { name = 'buffer' },
+  },
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
