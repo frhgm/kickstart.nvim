@@ -32,9 +32,9 @@ vim.keymap.set('n', '<leader>sd', telescope_builtin.diagnostics, { desc = '[S]ea
 -- TODO: Ademas al seleccionar un commit permitir ver mas detalle, en vez de checkout
 vim.keymap.set('n', '<leader>sc', telescope_builtin.git_commits, { desc = '[S]earch Git [C]ommits' })
 vim.keymap.set('n', '<leader>sk', telescope_builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-vim.keymap.set('n', '<leader>ss', ':Telescope<CR>', { desc = '[S]earch Telescope' })
 vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
-vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
+vim.keymap.set('n', '<leader>sx', require('telescope.builtin').builtin, { desc = '[S]earch [X]All Telescope' })
+vim.keymap.set('n', '<leader>ss', require('telescope.builtin').lsp_workspace_symbols, { desc = '[S]earch [S]ymbols' })
 
 
 
