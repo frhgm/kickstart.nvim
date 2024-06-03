@@ -8,14 +8,14 @@ return {
 	{
 		"craftzdog/solarized-osaka.nvim",
 		name = "solarized-osaka",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 		opts = {},
 	},
 	{
 		"tanvirtin/monokai.nvim",
 		name = "monokai",
-		lazy = true,
+		lazy = false,
 		config = function()
 			vim.cmd.colorscheme 'monokai_pro'
 		end,
@@ -24,7 +24,7 @@ return {
 		-- Theme inspired by Atom
 		'navarasu/onedark.nvim',
 		name = "onedark",
-		lazy = true,
+		lazy = false,
 		config = function()
 			vim.cmd.colorscheme 'onedark'
 		end,
@@ -32,7 +32,7 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		name = "gruvbox",
-		lazy = true,
+		lazy = false,
 		config = function()
 			vim.cmd.colorscheme 'gruvbox'
 		end,
@@ -56,7 +56,7 @@ return {
 	{
 		'rose-pine/neovim',
 		name = 'rose-pine',
-		lazy = true,
+		lazy = false,
 		config = function()
 			require('rose-pine').setup({
 				disable_background = true,
@@ -67,7 +67,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		name = "tokyonight",
-		lazy = true,
+		lazy = false,
 		config = function()
 			require("tokyonight").setup({
 				-- your configuration comes here

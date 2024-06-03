@@ -55,3 +55,5 @@ vim.opt.wrap = false;
 --demasiado util
 vim.opt.scrolloff = 8;
 vim.opt.sidescrolloff = 8;
+
+vim.cmd.colorscheme 'rose-pine'
