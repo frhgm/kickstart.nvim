@@ -217,7 +217,6 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
-
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
   nmap('gr', telescope_builtin.lsp_references, '[G]oto [R]eferences')
@@ -227,7 +226,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', telescope_builtin.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   -- See `:help K` for why this keymap
-  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality

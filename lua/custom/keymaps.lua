@@ -55,3 +55,7 @@ vim.keymap.set('n', '<leader>tm', function()
 	vim.cmd.split()
 	vim.cmd.term()
 end)
+
+
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, silent = true })
+-- nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
