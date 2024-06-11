@@ -17,15 +17,19 @@ return
 		},
 	},
 	{
+		'nvim-lua/plenary.nvim',
+		name = 'plenary',
+	},
+	{
 		"kdheepak/lazygit.nvim",
 		-- optional for floating window border decoration
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			"plenary",
 		},
 	},
 	{
 		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "plenary" },
 		opts = {
 			keywords = {
 				TODO = { icon = " ", color = "info", alt = { "WIP", "XXX" } },
@@ -41,7 +45,7 @@ return
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = { "telescope", "nvim-lua/plenary.nvim" }
+		dependencies = { "telescope", "plenary" }
 	},
 	{ 'ThePrimeagen/harpoon',  name = "harpoon" },
 	{

@@ -10,8 +10,6 @@ return {
 		"BufNewFile C:/Users/frhgm/Documents/Markdown/Obsidian/**.md",
 	},
 	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
 	opts = {
 		workspaces = {
 			{
@@ -20,6 +18,7 @@ return {
 			}
 		},
 		-- see below for full list of options 👇
+		"plenary",
 	},
 	config = function()
 		vim.opt.conceallevel = 2

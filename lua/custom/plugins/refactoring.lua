@@ -1,7 +1,7 @@
 return {
 	"ThePrimeagen/refactoring.nvim",
 	dependencies = {
-		"nvim-lua/plenary.nvim",
+		"plenary",
 		"nvim-treesitter/nvim-treesitter",
 	},
 	config = function()
