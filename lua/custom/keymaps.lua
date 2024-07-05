@@ -59,3 +59,11 @@ end)
 
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, silent = true })
 -- nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+--
+
+
+vim.keymap.set('n', '<leader>X', function()
+	vim.api.nvim_put({ '///<summary>', '///', '///</summary>' }, 'c', true, true)
+	vim.api.nvim_input('k')
+	vim.api.nvim_input('A')
+end, { desc = 'XML Comment' })
