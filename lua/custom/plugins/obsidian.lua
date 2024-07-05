@@ -1,23 +1,10 @@
 --https://github.com/epwalsh/obsidian.nvim
 return {
 	"epwalsh/obsidian.nvim",
+	version = "*",
 	ft = "markdown",
 	lazy = true,
-	event = {
-		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-		-- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-		"BufReadPre C:/Users/frhgm/Documents/Markdown/Obsidian/**.md",
-		"BufNewFile C:/Users/frhgm/Documents/Markdown/Obsidian/**.md",
-	},
 	dependencies = {
-	opts = {
-		workspaces = {
-			{
-				name = "personal",
-				path = "~/Documents/markdown/Obsidian",
-			}
-		},
-		-- see below for full list of options 👇
 		"plenary",
 	},
 	config = function()
