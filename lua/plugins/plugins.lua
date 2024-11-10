@@ -192,6 +192,7 @@ return {
   -- },
   {
     "epwalsh/obsidian.nvim",
+    lazy = true,
     ft = "markdown",
     -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
     -- event = {
@@ -228,6 +229,7 @@ return {
   },
   {
     "adalessa/laravel.nvim",
+    ft = "php",
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "tpope/vim-dotenv",
@@ -242,5 +244,45 @@ return {
     },
     event = { "VeryLazy" },
     config = true,
-  }
+    lazy = true,
+  },
+  {
+    -- Explorador de directorio como nvim buffer
+    "stevearc/oil.nvim",
+    lazy = true,
+  },
+  {
+    -- Mejor manejo para colapsar o abrir lineas
+    "Wansmer/treesj",
+    lazy = false,
+  },
+  {
+    -- Permite envolver con caracteres usando cualquier vim motion
+    "echasnovski/mini.surround",
+    lazy = false,
+  },
+  {
+    -- Provee una mejor visualización de mensajes de LSP
+    "maan2003/lsp_lines.nvim",
+    lazy = true,
+  },
+  {
+    'SuperBo/fugit2.nvim',
+    opts = {
+      width = 100,
+    },
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'nvim-lua/plenary.nvim',
+      {
+        'chrisgrieser/nvim-tinygit', -- optional: for Github PR view
+        dependencies = { 'stevearc/dressing.nvim' }
+      },
+    },
+    cmd = { 'Fugit2', 'Fugit2Diff', 'Fugit2Graph' },
+    keys = {
+      { '<leader>F', mode = 'n', '<cmd>Fugit2<cr>' }
+    }
+  },
 }
